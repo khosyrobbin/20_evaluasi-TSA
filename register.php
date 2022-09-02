@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
             $sql = "INSERT INTO user (username, password)
                     VALUES ('$username', '$password')";
             $result = mysqli_query($conn, $sql);
-            header("Location: index.php");
+            header("Location: index.html");
             if ($result) {
                 echo "<script>alert('Selamat, registrasi berhasil!')</script>";
                 $username = "";
