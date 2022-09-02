@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
     $password = md5($_POST['password']);
     $cpassword = md5($_POST['cpassword']);
     if ($password == $cpassword) {
-        $sql = "SELECT * FROM user WHERE email='$username'";
+        $sql = "SELECT * FROM user WHERE username='$username'";
         $result = mysqli_query($conn, $sql);
         if (!$result->num_rows > 0) {
             $sql = "INSERT INTO user (username, password)
